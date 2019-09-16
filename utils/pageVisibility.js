@@ -4,7 +4,12 @@ class PageVisible {
     this.hidden = 'hidden'
     this.visibilityChange = 'visibilitychange'
     this.visibilitySupported()
-    this.onVisible()
+    
+    if (this.visible) {
+      this.onVisible()
+    } else {
+      throw new Error('Not support visibilitychange, Please double check your browser!')
+    }
   }
 
   visibilitySupported() {
