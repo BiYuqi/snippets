@@ -21,7 +21,6 @@ module.exports = {
     "indent": ["error", 2],
     'generator-star-spacing': 'off',
     "quotes": ["error", "single"],
-    "eqeqeq": 2,
     "default-case": 2
   }
 }
