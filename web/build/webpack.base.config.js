@@ -71,6 +71,14 @@ const app = {
       }
     ]
   },
+  resolve: {
+    alias: {
+      '@': resolve('../src'),
+      '@shared': resolve('../src/shared'),
+      '@cpts': resolve('../src/components'),
+      '@hooks': resolve('../src/hooks')
+    }
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '../public/index.html')
