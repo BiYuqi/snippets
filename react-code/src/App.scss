@@ -8,6 +8,10 @@ body {
   padding: 20px;
 }
 
+p {
+  margin: 0;
+  padding: 0;
+}
 .layout-default {
   font-size: 16px;
   border: 1px solid #53d5c1;
@@ -17,5 +21,6 @@ body {
   word-wrap: break-word;
 }
 
-.layout-innder-default {
+.layout-inner-default {
+  margin-bottom: 25px;
 }

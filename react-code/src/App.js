@@ -1,9 +1,10 @@
 import React, { Fragment } from 'react'
 import { Row, Col } from 'antd'
-import FeatureToggle from '@cpts/feature-toggle/example'
-import Conditions from '@cpts/conditions/example'
-import { ClickBox } from '@hooks/click-outside/example'
-import { IsOnline } from '@hooks/is-online/example'
+import FeatureToggle from './components/feature-toggle/example'
+import Conditions from './components/conditions/example'
+import { ClickBox } from './hooks/click-outside/example'
+import { IsOnline } from './hooks/is-online/example'
+import { ControlledInputExample } from './hooks/crontrolled-input/example'
 import './App.scss'
 
 const App = () => {
@@ -21,6 +22,9 @@ const App = () => {
         </Col>
         <Col span={3}>
           <IsOnline />
+        </Col>
+        <Col span={6}>
+          <ControlledInputExample />
         </Col>
       </Row>
     </Fragment>
