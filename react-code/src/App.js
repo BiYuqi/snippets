@@ -6,6 +6,7 @@ import { ClickBox } from './hooks/click-outside/example'
 import { IsOnline } from './hooks/is-online/example'
 import { ControlledInputExample } from './hooks/crontrolled-input/example'
 import { LimitedTextareaExample } from './hooks/limited-textarea/example'
+import { MultiselectCheckboxExample } from './hooks/multi-select-checkbox/example'
 import './App.scss'
 
 const App = () => {
@@ -29,6 +30,9 @@ const App = () => {
         </Col>
         <Col span={6}>
           <LimitedTextareaExample />
+        </Col>
+        <Col span={6}>
+          <MultiselectCheckboxExample />
         </Col>
       </Row>
     </Fragment>
