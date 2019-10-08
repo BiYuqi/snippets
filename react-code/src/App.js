@@ -5,8 +5,10 @@ import Conditions from './components/conditions/example'
 import { ClickBox } from './hooks/click-outside/example'
 import { IsOnline } from './hooks/is-online/example'
 import { ControlledInputExample } from './hooks/crontrolled-input/example'
-import { LimitedTextareaExample } from './hooks/limited-textarea/example'
-import { MultiselectCheckboxExample } from './hooks/multi-select-checkbox/example'
+import { LimitedTextareaExample } from './components/limited-textarea/example'
+import { MultiselectCheckboxExample } from './components/multi-select-checkbox/example'
+import { PasswordRevealerExample } from './components/password-revealer/example'
+
 import './App.scss'
 
 const App = () => {
@@ -31,8 +33,13 @@ const App = () => {
         <Col span={6}>
           <LimitedTextareaExample />
         </Col>
-        <Col span={6}>
+      </Row>
+      <Row gutter={24} align="middle">
+        <Col span={3}>
           <MultiselectCheckboxExample />
+        </Col>
+        <Col span={3}>
+          <PasswordRevealerExample />
         </Col>
       </Row>
     </Fragment>

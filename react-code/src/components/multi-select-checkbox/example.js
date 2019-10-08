@@ -2,7 +2,7 @@ import React from 'react'
 import { Layout } from '../../shared/layout'
 import { MultiselectCheckbox } from './index'
 
-const options = [{ label: 'Item One' }, { label: 'Item Two' }]
+const options = [{ label: 'Item One', checked: true }, { label: 'Item Two', checked: false }]
 
 export const MultiselectCheckboxExample = () => {
   return (
