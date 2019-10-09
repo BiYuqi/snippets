@@ -8,7 +8,7 @@ import { ControlledInputExample } from './hooks/crontrolled-input/example'
 import { LimitedTextareaExample } from './components/limited-textarea/example'
 import { MultiselectCheckboxExample } from './components/multi-select-checkbox/example'
 import { PasswordRevealerExample } from './components/password-revealer/example'
-
+import { SelectExample } from './components/select/example'
 import './App.scss'
 
 const App = () => {
@@ -40,6 +40,9 @@ const App = () => {
         </Col>
         <Col span={3}>
           <PasswordRevealerExample />
+        </Col>
+        <Col span={3}>
+          <SelectExample />
         </Col>
       </Row>
     </Fragment>
