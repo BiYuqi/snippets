@@ -1,0 +1,22 @@
+{
+  "name": "snippets",
+  "version": "1.0.0",
+  "description": "<!-- <details open=\"open\">     <summary>         <img src=\"assets/wordcloud.png\" title=\"词云, 点击展开详细分类\" alt=\"词云， 点击展开详细分类\">         <p align=\"center\">:cloud: 词云 :cloud: <sub>点击词云展开详细分类:point_down: </sub></p>     </summary>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BiYuqi/snippets.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BiYuqi/snippets/issues"
+  },
+  "homepage": "https://github.com/BiYuqi/snippets#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  }
+}
