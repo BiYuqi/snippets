@@ -15,6 +15,8 @@ module.exports = async () => {
     console.log(JSON.stringify(issues))
     process.exit(1)
   }
+  console.log(issues)
+  console.log('From createReame file')
   const result = reStructureJson(issues)
   const README = []
   README.push(TOP)

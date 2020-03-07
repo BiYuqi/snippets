@@ -18,9 +18,9 @@ const CONFIG = {
   token: process.env.GITHUB_TOKEN
 }
 console.log(CONFIG)
-console.log(process.env)
 
 module.exports = () => {
+  console.log(GITHUB_ISSUE_API(CONFIG))
   return new Promise((resolve, reject) => {
     fetch(GITHUB_ISSUE_API(CONFIG))
       .then(res => res.json())
