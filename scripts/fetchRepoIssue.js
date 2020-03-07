@@ -1,11 +1,13 @@
 const fetch = require('node-fetch')
+const COS_ENV = process.argv.slice(2)
+const [GITHUB_SNIPPET] = COS_ENV
 
 const GITHUB_ISSUE_API = ({owner, repo, token}) => {
   return `https://api.github.com/repos/${owner}/${repo}/issues${generateQuery({owner, token})}`
 }
 
 const generateQuery = ({owner, token}) => {
-  return `?creator=${owner}&per_page=1000&access_token=${token.join('')}`
+  return `?creator=${owner}&per_page=1000&access_token=${token}`
 }
 
 const REDIRECT_URL = ({owner, repo}) => {
@@ -15,7 +17,7 @@ const REDIRECT_URL = ({owner, repo}) => {
 const CONFIG = {
   owner: 'BiYuqi',
   repo: 'snippets',
-  token: ['737719cae24371de', '39cac47ed76ee084513f8389']
+  token: GITHUB_SNIPPET
 }
 console.log(CONFIG)
 
