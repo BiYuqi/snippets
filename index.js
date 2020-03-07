@@ -1,3 +1,3 @@
-const CreateReadme = require('./scripts/CreateReadme')
+const createReadme = require('./scripts/createReadme')
 
-CreateReadme()
+createReadme()
