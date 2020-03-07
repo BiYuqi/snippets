@@ -37,8 +37,8 @@ jobs:
       env:
         GITHUB_LOGIN: BiYuqi
         GITHUB_REPO: snippets
-        GITHUB_TOKEN: 07413d81b67fcb2ccb0376044c9d52f9640863d8
+        ACCESS_TOKEN: ${{secrets.ACCESS_TOKEN}}
       run: |
-        git push https://$GITHUB_LOGIN:$GITHUB_TOKEN@github.com/$GITHUB_REPO.git
+        git push https://$GITHUB_LOGIN:$ACCESS_TOKEN@github.com/$GITHUB_REPO.git
     - name: done
       run: echo 'done'
