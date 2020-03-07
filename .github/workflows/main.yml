@@ -1,6 +1,6 @@
 name: Auto Generate Issue Blog
 
-on: [issues, issue_comment, label, milestone]
+on: [issues, issue_comment, label, push]
 
 jobs:
   build:
@@ -36,6 +36,6 @@ jobs:
         GITHUB_REPO: snippets
         GITHUB_TOKEN: ${{ secrets.GITHUB_SNIPPETS }}
       run: |
-        git push https://$GITHUB_LOGIN:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git
+        git push https://$GITHUB_LOGIN:$GITHUB_TOKEN@github.com/$GITHUB_REPO.git
     - name: done
       run: echo 'done'
