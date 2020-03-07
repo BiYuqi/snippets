@@ -4,7 +4,7 @@
   "description": "<!-- <details open=\"open\">     <summary>         <img src=\"assets/wordcloud.png\" title=\"词云, 点击展开详细分类\" alt=\"词云， 点击展开详细分类\">         <p align=\"center\">:cloud: 词云 :cloud: <sub>点击词云展开详细分类:point_down: </sub></p>     </summary>",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node ./index.js"
   },
   "repository": {
     "type": "git",

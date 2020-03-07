@@ -1,0 +1,41 @@
+name: Auto Generate Issue Blog
+
+on: [issues, issue_comment, label, milestone]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+
+    - name: Use Node.js 10.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: "10.x"
+
+    - name: Setup Global Env
+      env:
+        GITHUB_LOGIN: BiYuqi
+        GITHUB_REPO: snippets
+        GITHUB_TOKEN: ${{ secrets.GITHUB_SNIPPETS }}
+      run: |
+        git config --global user.email "biyuqiwan@163.com"
+        git config --global user.name "BiYuqi"
+
+        npm install
+        npm run build
+    - name: commit change
+      run: |
+        git add .
+        git commit -m "Update from Github Action"
+    - name: push change
+      env:
+        GITHUB_LOGIN: BiYuqi
+        GITHUB_REPO: snippets
+        GITHUB_TOKEN: ${{ secrets.GITHUB_SNIPPETS }}
+      run: |
+        git push https://$GITHUB_LOGIN:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git
+    - name: done
+      run: echo 'done'

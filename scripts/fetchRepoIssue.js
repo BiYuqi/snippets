@@ -1,11 +1,11 @@
 const fetch = require('node-fetch')
 
 const GITHUB_ISSUE_API = ({owner, repo}) => {
-  return `https://api.github.com/repos/${owner}/${repo}/issues`
+  return `https://api.github.com/repos/${owner}/${repo}/issues${generateQuery({owner, repo})}`
 }
 
 const generateQuery = ({owner, token}) => {
-  return `?creator=${owner}&per_page=1000&access_token=${token.join('')}`
+  return `?creator=${owner}&per_page=1000&access_token=${token}`
 }
 
 const REDIRECT_URL = ({owner, repo}) => {
@@ -13,9 +13,9 @@ const REDIRECT_URL = ({owner, repo}) => {
 }
 
 const CONFIG = {
-  owner: 'BiYuqi',
-  repo: 'snippets',
-  token: ['07413d81b67fcb2cc', 'b0376044c9d52f9640863d8']
+  owner: process.env.GITHUB_LOGIN,
+  repo: process.env.GITHUB_REPO,
+  token: process.env.GITHUB_TOKEN
 }
 
 module.exports = () => {
