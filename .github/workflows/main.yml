@@ -19,7 +19,6 @@ jobs:
       env:
         GITHUB_LOGIN: BiYuqi
         GITHUB_REPO: snippets
-        GITHUB_TOKEN: 07413d81b67fcb2ccb0376044c9d52f9640863d8
       run: |
         git config --global user.email "biyuqiwan@163.com"
         git config --global user.name "BiYuqi"
@@ -27,7 +26,6 @@ jobs:
       env:
         GITHUB_LOGIN: BiYuqi
         GITHUB_REPO: snippets
-        GITHUB_TOKEN: 07413d81b67fcb2ccb0376044c9d52f9640863d8
       run: |
         npm install
         npm run build
