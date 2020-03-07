@@ -9,6 +9,12 @@ const TOP = `
 `
 module.exports = async () => {
   const issues = await fetchRepoIssue()
+
+  if (!issues) {
+    console.log('Get the data faild. Please check.')
+    console.log(JSON.stringify(issues))
+    process.exit(1)
+  }
   const result = reStructureJson(issues)
   const README = []
   README.push(TOP)

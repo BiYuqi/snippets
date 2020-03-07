@@ -19,23 +19,20 @@ jobs:
       env:
         GITHUB_LOGIN: BiYuqi
         GITHUB_REPO: snippets
-        GITHUB_TOKEN: ${{ secrets.GITHUB_SNIPPETS }}
+        GITHUB_TOKEN: 07413d81b67fcb2ccb0376044c9d52f9640863d8
       run: |
         git config --global user.email "biyuqiwan@163.com"
         git config --global user.name "BiYuqi"
-
-        npm install
-        npm run build
-    - name: commit change
-      run: |
-        git add .
-        git commit -m "Update from Github Action"
-    - name: push change
+    - name: Install
       env:
         GITHUB_LOGIN: BiYuqi
         GITHUB_REPO: snippets
-        GITHUB_TOKEN: ${{ secrets.GITHUB_SNIPPETS }}
+        GITHUB_TOKEN: 07413d81b67fcb2ccb0376044c9d52f9640863d8
       run: |
+        npm install
+        npm run build
+        git add .
+        git commit -m "Update from Github Action"
         git push https://$GITHUB_LOGIN:$GITHUB_TOKEN@github.com/$GITHUB_REPO.git
     - name: done
       run: echo 'done'

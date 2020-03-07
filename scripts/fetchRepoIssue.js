@@ -1,7 +1,7 @@
 const fetch = require('node-fetch')
 
-const GITHUB_ISSUE_API = ({owner, repo}) => {
-  return `https://api.github.com/repos/${owner}/${repo}/issues${generateQuery({owner, repo})}`
+const GITHUB_ISSUE_API = ({owner, repo, token}) => {
+  return `https://api.github.com/repos/${owner}/${repo}/issues${generateQuery({owner, token})}`
 }
 
 const generateQuery = ({owner, token}) => {
@@ -17,6 +17,8 @@ const CONFIG = {
   repo: process.env.GITHUB_REPO,
   token: process.env.GITHUB_TOKEN
 }
+console.log(CONFIG)
+console.log(process.env)
 
 module.exports = () => {
   return new Promise((resolve, reject) => {

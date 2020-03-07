@@ -9,6 +9,11 @@ const exactUrl = (content, html_url) => {
 }
 
 const dataReduction = (issues) => {
+  if (!issues || issues.length <= 0) {
+    console.log('dataReduction error')
+    process.exit(1)
+  }
+
   return issues.map(({ title, html_url, labels, body }) => {
     // skip unmark label link
     if (labels.length > 0) {
