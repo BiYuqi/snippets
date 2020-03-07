@@ -15,10 +15,11 @@ script:
   - npm run build "${GITHUB_SNIPPET}"
 
 after_script:
-  - git init 
+  - cd ./dist
+  - git init
   - git config user.name "BiYuqi"
   - git config user.email "biyuqiwan@163.com"
-  - git add README.md
+  - git add .
   - git commit -m "Travis CI Auto Generate at `date +"%Y-%m-%d %H:%M"`"
   - git push --force --quiet "https://${GITHUB_SNIPPET}@${GH_REF}" master:master
 
