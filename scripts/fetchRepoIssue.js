@@ -5,7 +5,7 @@ const GITHUB_ISSUE_API = ({owner, repo, token}) => {
 }
 
 const generateQuery = ({owner, token}) => {
-  return `?creator=${owner}&per_page=1000&access_token=${token}`
+  return `?creator=${owner}&per_page=1000&access_token=${token.join('')}`
 }
 
 const REDIRECT_URL = ({owner, repo}) => {
@@ -15,7 +15,7 @@ const REDIRECT_URL = ({owner, repo}) => {
 const CONFIG = {
   owner: process.env.GITHUB_LOGIN,
   repo: process.env.GITHUB_REPO,
-  token: process.env.GITHUB_TOKEN
+  token: process.env.GITHUB_TOKEN.split('')
 }
 console.log(CONFIG)
 
