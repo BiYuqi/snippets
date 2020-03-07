@@ -44,6 +44,6 @@ module.exports = async () => {
 
   const RemoveSpace = /^\s{5}/gmi
   
-
-  fs.writeFileSync('dist/README.md', README.join('\n').replace(RemoveSpace, ''))
+  fs.mkdirSync('./dist')
+  fs.writeFileSync('./dist/README.md', README.join('\n').replace(RemoveSpace, ''))
 }
