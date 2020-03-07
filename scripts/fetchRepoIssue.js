@@ -13,9 +13,9 @@ const REDIRECT_URL = ({owner, repo}) => {
 }
 
 const CONFIG = {
-  owner: process.env.GITHUB_LOGIN,
-  repo: process.env.GITHUB_REPO,
-  token: ['d2f398601e81a5cf', '5649f2ec1dd3ed65e2335768']
+  owner: 'BiYuqi',
+  repo: 'snippets',
+  token: ['737719cae24371de', '39cac47ed76ee084513f8389']
 }
 console.log(CONFIG)
 
