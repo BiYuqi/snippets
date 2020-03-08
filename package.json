@@ -1,0 +1,48 @@
+{
+  "name": "snippets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "scripts": {
+    "start:dev": "nodemon --debug ./dist/index.js",
+    "start": "tsc",
+    "dev": "npm-run-all --serial --silent start start:*",
+    "build": "node ./dist/index.js",
+    "prettier": "prettier -c --write **/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BiYuqi/snippets.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BiYuqi/snippets/issues"
+  },
+  "homepage": "https://github.com/BiYuqi/snippets#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,ts,json,css,md}": [
+      "yarn prettier",
+      "git add"
+    ],
+    "**/*.{js,ts}": [
+      "yarn lint:fix",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^13.9.0",
+    "axios": "^0.19.2",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
+    "nodemon": "^2.0.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.19.1",
+    "typescript": "^3.8.3"
+  }
+}
