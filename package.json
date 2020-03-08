@@ -8,6 +8,7 @@
     "start": "tsc -w",
     "dev": "npm-run-all --serial --silent start start:*",
     "build": "node ./dist/index.js",
+    "build:ts": "tsc",
     "prettier": "prettier -c --write **/*"
   },
   "repository": {

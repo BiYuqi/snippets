@@ -1,4 +1,5 @@
 import * as fs from 'fs'
+import * as path from 'path'
 import { refactoringData } from './refactoringData'
 import { fetchIssues } from './fetchIssues'
 import { Issues } from './simplifyIssue'
@@ -39,6 +40,15 @@ export async function generateReadme() {
     README.push(template)
   })
 
-  fs.mkdirSync('./dist')
-  fs.writeFileSync('./dist/README.md', README.join('\n').replace(RemoveSpace, ''))
+  const cwd = process.cwd()
+  const ensureExist = fs.existsSync(path.resolve(cwd, 'dist'))
+
+  if (!ensureExist) {
+    fs.mkdirSync(path.resolve(cwd, 'dist'))
+  }
+  try {
+    fs.writeFileSync(path.resolve(cwd, 'dist/README.md'), README.join('\n').replace(RemoveSpace, ''))
+  } catch (error) {
+    console.log(error)
+  }
 }

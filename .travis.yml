@@ -25,7 +25,7 @@ after_script:
 
 branches:
   only:
-    - issue-branch
+    - issue-typescript
 env:
  global:
    - GH_REF: github.com/BiYuqi/snippets.git
