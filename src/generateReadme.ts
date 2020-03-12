@@ -4,7 +4,7 @@ import { refactoringData } from './refactoringData'
 import { fetchIssues } from './fetchIssues'
 import { Issues } from './simplifyIssue'
 
-const DefaultReadme: string = '<h1 align="center">日常技术摘录 👋</h1>'
+const DefaultReadme: string = '<h1 align="center">日常技术摘录 👋<a href="https://github.com/BiYuqi/snippets/tree/issue-typescript" style="font-size: 14px">Source Code</a></h1>'
 const RemoveSpace: RegExp = /^\s{5}/gmi
 
 export async function generateReadme() {
