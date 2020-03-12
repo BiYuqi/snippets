@@ -1,12 +1,12 @@
 {
   "name": "snippets",
   "version": "1.0.0",
-  "description": "",
+  "description": "Automatically categorize Github issues as a README",
   "main": "./dist/index.js",
   "scripts": {
-    "start:dev": "nodemon --debug ./dist/index.js",
-    "start": "tsc -w",
     "dev": "npm-run-all --serial --silent start start:*",
+    "start": "tsc -w",
+    "start:dev": "nodemon --debug ./dist/index.js",
     "build": "node ./dist/index.js",
     "build:ts": "tsc",
     "prettier": "prettier -c --write **/*"
@@ -15,7 +15,7 @@
     "type": "git",
     "url": "git+https://github.com/BiYuqi/snippets.git"
   },
-  "author": "",
+  "author": "biyuqiwan@163.com",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/BiYuqi/snippets/issues"
@@ -28,11 +28,7 @@
   },
   "lint-staged": {
     "**/*.{js,ts,json,css,md}": [
-      "yarn prettier",
-      "git add"
-    ],
-    "**/*.{js,ts}": [
-      "yarn lint:fix",
+      "npm run prettier",
       "git add"
     ]
   },
