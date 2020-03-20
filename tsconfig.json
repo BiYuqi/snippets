@@ -4,6 +4,8 @@
     "allowJs": true,
     "target": "es5",
     "module": "commonjs",
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
     "typeRoots": [
       "typings",
       "node_modules/@types"
