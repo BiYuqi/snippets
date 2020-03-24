@@ -13,7 +13,7 @@ interface EnvConfig {
 const EnvConfig: EnvConfig = {
   owner: 'BiYuqi',
   repo: 'snippets',
-  token: GITHUB_SNIPPET
+  token: GITHUB_SNIPPET || ''
 }
 
 function githubIssueApi({owner, repo, token}): string {
@@ -21,6 +21,9 @@ function githubIssueApi({owner, repo, token}): string {
 }
 
 function generateQuery({owner, token}): string {
+  if (!token) {
+    return '?&per_page=30'
+  }
   return `?creator=${owner}&per_page=1000&access_token=${token}`
 }
 

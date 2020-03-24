@@ -48,6 +48,7 @@ export async function generateReadme() {
   }
   try {
     fs.writeFileSync(path.resolve(cwd, 'dist/README.md'), README.join('\n').replace(RemoveSpace, ''))
+    fs.writeFileSync(path.resolve(cwd, 'dist/snippets.json'), JSON.stringify(result))
   } catch (error) {
     console.log(error)
   }

@@ -4,11 +4,13 @@
   "description": "Automatically categorize Github issues as a README",
   "main": "./dist/index.js",
   "scripts": {
-    "dev": "npm-run-all --serial --silent start start:*",
+    "dev": "npm run start && npm run build:ts && npm run server",
     "start": "tsc -w",
-    "start:dev": "nodemon --debug ./dist/index.js",
     "build": "node ./dist/index.js",
+    "build:site": "npm run build:ts && npm run build && npm run build:snippets",
     "build:ts": "tsc",
+    "build:snippets": "node ./dist/generatePage.js",
+    "server": "http-server ./dist -p 9967",
     "prettier": "prettier -c --write **/*"
   },
   "repository": {
@@ -35,6 +37,7 @@
   "devDependencies": {
     "@types/node": "^13.9.0",
     "@types/node-fetch": "^2.5.5",
+    "http-server": "^0.12.1",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.8",
     "node-fetch": "^2.6.0",
