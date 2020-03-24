@@ -23,7 +23,7 @@ const defaultLabel: Labels = {
   name: '未分类'
 }
 
-function extractUrl (issueContent: IssueContent) {
+function extractUrl(issueContent: IssueContent) {
   const match = issueContent.content.match(extractLinkReg)
   if (match) {
     return match[1]

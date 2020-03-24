@@ -9,7 +9,9 @@ function replacePlaceholderAndFillHtml(): void {
 }
 
 function generateRenderLogic() {
-  const Github_Issues = fs.readFileSync(path.resolve(process.cwd(), 'dist/snippets.json'), {encoding: 'utf8'})
+  const Github_Issues = fs.readFileSync(path.resolve(process.cwd(), 'dist/snippets.json'), {
+    encoding: 'utf8'
+  })
 
   return `
     <script>window.Github_Issues = ${Github_Issues}</script>

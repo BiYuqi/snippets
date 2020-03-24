@@ -28,7 +28,7 @@ class Snippets {
   renderList(id) {
     const issueList = this.Github_Issues[id]
     const list = []
-    issueList.forEach(({issueUrl, name}) => {
+    issueList.forEach(({ issueUrl, name }) => {
       list.push(`
       <li><a href="${issueUrl}">${name}</a></li>
       `)
