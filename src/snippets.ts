@@ -17,9 +17,11 @@ class Snippets {
     Object.keys(this.Github_Issues).forEach(id => {
       const issue = this.Github_Issues[id]
       const displayLabel = issue[0].displayLabel
-      const className = this.defautlLabel === displayLabel ? 'active' : ''
+      const activeClassName = this.defautlLabel === displayLabel ? 'class="active"' : ''
+      const articleAmount = issue.length > 99 ? '99+' : issue.length
+
       labels.push(
-        `<span data-id="${id}" data-display="${displayLabel}" class="${className}">${displayLabel}<i>${issue.length}</i></span>`
+        `<span data-id="${id}" data-display="${displayLabel}" ${activeClassName}>${displayLabel}<i>${articleAmount}</i></span>`
       )
     })
     return labels
@@ -29,9 +31,7 @@ class Snippets {
     const issueList = this.Github_Issues[id]
     const list = []
     issueList.forEach(({ issueUrl, name }) => {
-      list.push(`
-      <li><a href="${issueUrl}">${name}</a></li>
-      `)
+      list.push(`<li><a href="${issueUrl}">${name}</a></li>`)
     })
     return list
   }
