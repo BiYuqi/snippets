@@ -9,18 +9,26 @@
       max-width: 1200px;
       margin: 0 auto;
     }
+
     .snippets-label {
+      margin 30px auto;
     }
+
     .snippets-label span {
       position: relative;
       display: inline-block;
-      padding: 6px 14px;
+      padding: 6px 18px;
       margin: 4px;
       font-size: 14px;
-      background: #1aafb1;
+      background: #5eba7d;
       border-radius: 10px;
       color: #fff;
       cursor: pointer;
+      transtion: background .3s;
+    }
+
+    .snippets-label span:hover {
+      background: #af1275;
     }
 
     .snippets-label span.active {
@@ -38,15 +46,20 @@
 
     .snippets-list {
       padding: 6px;
-      list-style: none;
+      list-style: decimal-leading-zero;
       margin-top: 30px;
     }
 
     .snippets-list li {
-      margin-bottom: 6px
+      margin-bottom: 10px;
     }
+
+    .snippets-list li:hover a {
+      color: #18afb1;
+    }
+
     .snippets-list a {
-      color: #333f48
+      color: #333f48;
     }
   </style>
 </head>
