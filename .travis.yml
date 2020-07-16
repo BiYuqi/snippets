@@ -18,14 +18,13 @@ script:
 
 after_script:
   - cd ./dist
-  - echo 'snippets.loadingmore.com' > CNAME
   - git init
   - git config user.name "BiYuqi"
   - git config user.email "biyuqiwan@163.com"
   - git add README.md
   - git commit -m "Travis CI Auto Generate at `date +"%Y-%m-%d %H:%M"`"
   - git push --force --quiet "https://${GITHUB_SNIPPET}@${GH_REF}" master:master
-  - git add index.html CNAME snippets.js
+  - git add index.html snippets.js
   - git commit -m "Travis CI Auto Generate at `date +"%Y-%m-%d %H:%M"`"
   - git push --force --quiet "https://${GITHUB_SNIPPET}@${GH_REF}" master:gh-pages
 
