@@ -15,7 +15,7 @@ function generateRenderLogic() {
 
   return `
     <script>window.Github_Issues = ${Github_Issues}</script>
-    <script src="/snippets.js"></script>
+    <script src="/snippets/snippets.js"></script>
   `
 }
 replacePlaceholderAndFillHtml()

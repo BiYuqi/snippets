@@ -5,7 +5,7 @@ import { fetchIssues } from './fetchIssues'
 import { Issues } from './simplifyIssue'
 
 const DefaultReadme: string =
-  '<h1 align="center">日常技术文档归档 👋<a href="https://snippets.loadingmore.com">Online</a></h1>'
+  '<h1 align="center">日常技术文档归档 👋<a href="https://biyuqi.github.io/snippets/">Online</a></h1>'
 const RemoveSpace: RegExp = /^\s{5}/gim
 
 export async function generateReadme() {
